@@ -1,0 +1,21 @@
+@mixin AdForLaptop {
+    @media screen and (max-width: 1024px){
+      @content;
+    }
+  }
+  @mixin AdForTablet {
+    @media screen and (max-width: 768px){
+      @content;
+    }
+  }
+  @mixin AdForMobileL {
+    @media screen and (max-width: 426px){
+      @content;
+    }
+  }
+  @mixin AdForMobileS {
+    @media screen and (max-width: 320px){
+      @content;
+    }
+  }
+  

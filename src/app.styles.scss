@@ -1,0 +1,1221 @@
+@import './sass/var.scss';
+@import'./sass/normalize.scss';
+@import './sass/animation.scss';
+@import './sass/mixins.scss';
+
+.container{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;  
+    justify-content: center;
+}
+.content{
+    padding: 0 135px 0 135px;
+    width: 1170px;
+    @include AdForLaptop {
+        padding: 0 50px 0 50px;
+        width: 923px;
+      }
+      @include AdForTablet{
+        padding: 0 20px 0 20px;
+      }
+}
+.header__menu {
+    display: flex;
+    margin-top: 32px;
+    .menu__element{
+        @include AdForTablet{
+            margin-top: 30px;
+        }
+    }
+    .menu__link {
+        text-decoration: none;
+        list-style: none;
+        margin-right: 70px;
+        font-size: 16px;
+        color: $main-white;
+        font-style: normal;
+        font-weight: 500;
+        @include AdForTablet{
+            font-size: 20px;
+            margin-right: 0px;
+            color: $main-black;
+            justify-content: flex-end;
+        }
+        &:hover{
+            padding-bottom: 18px;
+            border-bottom: 3px solid $main-white;
+            @include AdForTablet{
+                padding-bottom: 3px;
+                border-bottom: 3px solid $main-black;
+            }
+        }
+    }
+    .login{
+        padding: 8px 25px 8px 25px;
+        border: 1px solid rgba(255, 255, 255, 0.387);
+        box-sizing: border-box;
+        border-radius: 34px;
+        margin-right: 0px;
+        @include AdForTablet{
+            border: none;
+            padding: 0px;
+        }
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.673);
+            color: #222;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.387);;
+        }
+    }
+    }
+.contacts{
+    margin-right: 160px !important;
+    
+    @include AdForLaptop{
+        margin-right: 70px !important;
+    }
+    @include AdForTablet{
+        margin-right: 0px !important;
+    }
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    margin: 0;
+    margin-left: auto;
+    margin-top: 8px;
+    z-index: 3;
+    @include AdForTablet {
+        display: none;
+        position: absolute;
+        text-align: right;
+        background-color: $main-white;
+        top: 72px;
+        right: 19px;
+        padding: 10px 40px 30px 20px;
+        width: 230px;
+      }
+    }
+.burger{
+    display: none;
+    width: 30px;
+    height: 5px;
+    background-color: $main-white;
+    position: relative;
+    margin-left: auto;
+    margin-top: 8px;
+    @include AdForTablet {
+        display: block;
+      }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        background-color: $main-white;
+        top: 10px;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 5px;
+        background-color: $main-white;
+        top: -10px;
+    }
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;  
+    text-transform: uppercase;
+    color: $main-white;
+    margin:0;
+    margin-bottom: 20px;
+    z-index: 3;
+    font-weight: 700;
+}
+.header{
+    min-height: 80px;
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        top: 80px;
+        z-index: 3;
+        background-color: $main-white;
+    }
+}
+.open{
+    margin-top: -85px;
+    background-image: url(./assets/bg1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    @include AdForLaptop{
+        background-size: 145%;
+        background-position-x: -400px;
+    }
+    @include AdForTablet{
+        background-size: 155%;
+        text-align: center;
+    }
+    @include AdForMobileL{
+        background-size: 220%;
+        background-position-x: -300px;
+    }
+}
+.title{
+    color: $main-white;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.025em;
+    text-transform: uppercase;
+    margin: 0;
+}
+.subtitle{
+    font-size: 24px;
+    color: $main-white;
+    @include AdForMobileL{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+.open__text{
+    width: 60%;
+    margin-top: 290px;
+    @include AdForLaptop{
+        width: 85%;
+    }
+    @include AdForTablet{
+        width: 100%;
+    }
+    @include AdForMobileL{
+        margin-top: 200px;
+    }
+}
+.title--open{
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 54px;
+    letter-spacing: 0.03em;
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+    @include AdForMobileL{
+        font-size: 24px;
+        line-height: 128.9%;
+    }
+}
+.subtitle--open{
+    margin-top: 20px;
+    letter-spacing: 0.015em;
+    font-weight: 600;
+    @include AdForMobileL{
+        font-size: 14px;
+    }
+}
+.btn{
+    background-color: $main-white;
+    font-size: 22px;
+    color: $main-black;
+    padding: 20px 55px 20px 55px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+    letter-spacing: 0.09em;
+}
+.btn--open{
+    margin-top: 100px;
+    &:hover{
+        box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+    }
+    @include AdForTablet{
+        margin-bottom: 100px;
+    }
+}
+.open__statistic{
+    display: flex;
+    background-color: $half-opacity;
+    width: 80%;
+    margin: auto;
+    color: $main-white;
+    margin-top: 168px;
+    border-radius: 15px 15px 0  0;
+    @include AdForLaptop {
+        width: 100%;
+        margin-top: 135px;
+      }
+    @include AdForTablet{
+        height: 114px;
+        left: 9px;
+        top: 605px;
+        width: 98%;
+        margin-top: 135px;
+        position: absolute;
+        border-radius: 15px;
+    }
+    @include AdForMobileL{
+        height: 285px;
+        top: 411px;
+        display: flex;
+        flex-direction: column;
+        width: 96%  ;
+    }
+    .statistic__content{
+        margin: 20px 0 10px 25px;
+        display: flex;
+        position: relative;
+    }
+    .statistic__count{
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 61px;
+        letter-spacing: 0.015em;
+        color: $white-gray;
+    }
+    .statistic__description{
+        font-size: 14px;
+        letter-spacing: 0.07em;
+        color: $white-gray; 
+        text-align: left;
+        margin: 18px 75px 0 10px;
+        font-weight: 600;
+        @include AdForLaptop {
+            margin: 18px 80px 0 10px;
+          }
+          @include AdForLaptop {
+            margin: 18px 12px 0 10px;
+          }
+    }
+}
+.six-edge__one{
+    background-image: url(./assets/Polygon1.png);
+    position: absolute;
+    width: 376px;
+    height: 394px;
+    top: 27%;
+    left: 55%;
+    @include AdForLaptop {
+        display: none;
+      }
+}
+.six-edge__two{
+    background-image: url(./assets/Polygon3.png);
+    position: absolute;
+    width: 233px;
+    height: 255px;
+    top: 12%;
+    left: 65%;
+    @include AdForLaptop {
+        display: none;
+      }
+}
+.screen-two{
+    background: $blue-gradient;
+    min-height: 1000px;
+    @include AdForTablet{
+        padding-top: 70px;
+    }
+    @include AdForMobileL{
+        display: flex;
+        padding-top: 210px;
+        justify-content: flex-start;
+    }
+}
+.title--main{
+    margin: 80px 0 5px 0;
+}
+.subtitle--small{
+    font-weight: normal;
+    font-size: 18px;
+    position: relative;
+    line-height: 22px;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 13px;
+        left: 200px;
+        width: 130px;
+        height: 2px;
+        background-color: $main-white;
+    }
+}
+.cardbar{
+    margin-top: 88px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 0;
+    @include AdForLaptop{
+        overflow: scroll;
+        width: 725px;   
+        align-items: flex-start;
+    }
+    @include AdForMobileL{
+        overflow-y: scroll;
+        overflow-x: none;
+        width: 380px;
+        height: 600px;
+        flex-direction: column;
+    }
+}
+.card{
+    cursor: pointer;
+    width: 370px;
+    height: 500px;
+    background-color: $main-white;
+    position: relative;
+    &:hover{
+        box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+        transition: 1s;
+    }
+    @include AdForLaptop{
+       margin-right: 30px;
+    }
+    @include AdForMobileL{
+        margin-bottom: 50px;
+    }
+}
+.card__title{
+    top: -30px;
+    position: absolute;
+    font-size: 18px;
+    color: $main-white;
+}
+.card__img{
+    width: 370px;
+    height: 500px;
+    display: flex;
+    justify-content: flex-end;
+    background-image: url(./assets/card-backgound.png);
+    &::after{
+        top: 15px;
+        right: 15px;
+        content: "";
+        position: absolute;
+        background-color: #232323;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
+    &::before{
+        top: 28px;
+        right: 30px;
+        z-index: 2;
+        content: "";
+        position: absolute;
+        background-image: url(./assets/Vector3.png);
+        width: 20px;
+        height: 25px;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+.arrow{
+    position: absolute;
+    width: 20.5px;
+    height: 41px;
+    cursor: pointer;
+    display: flex;
+    @include AdForLaptop{
+        display: none;
+     }
+}
+.arrow__back{
+    background-image: url(./assets/Vector1.png);
+    left: -45px;
+}
+.arrow__next{
+    background-image: url(./assets/Vector1.png);
+    transform: scale(-1, 1);
+    margin-left: 1200px;
+}
+.btn--two{
+    padding: 0;
+    cursor: pointer;
+    margin-top: 40px;
+    color: $main-white;
+    font-size: 24px;
+    background-color: inherit;
+    border: inherit;
+    position: relative;
+    letter-spacing: 0.025em;
+    font-weight: normal;
+    &::after{
+        background-image:url(./assets/Arrow1.png);
+        position: absolute;
+        content: "";
+        left: 150px;
+        top: 12px;
+        width: 35px;
+        height: 10px;
+    }
+    &:hover{
+        &::after{
+            transition: 2s;
+            transform: translate(+20%,0); 
+        }
+    }
+}
+.screen-three{
+    height: 470px;  
+    margin-top: -6px;
+    background-image: url(./assets/background-weather.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.title--weather{
+    text-shadow: 0px 4px 7px rgba(0, 0, 0, 0.15);
+    font-size: 36px;
+    margin-top: 120px;
+    width: 75%;
+    line-height: 44px;
+    margin-bottom: 10px;
+    @include AdForTablet{
+        width: 100%;
+    }
+    @include AdForMobileL{
+        font-size: 22px;
+        line-height: 29px;
+        margin-top: 115px;
+        
+    }
+}
+.btn--weather{
+    margin-top: 60px;
+    border: 4px solid $main-white;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-color: inherit;
+    color: $main-white;
+    &:hover{
+        background-color: $main-white;
+        color: $main-black;
+        transition: 1s;
+    }
+}
+.weather__content{
+    @include AdForLaptop{
+        width: 84%;
+    }
+    @include AdForMobileL{
+        width: 100%;
+    }
+}
+.weather__background{
+    margin-top: 60px;
+    background-image: url(./assets/Polygon4.png);
+    width: 395px;
+    height: 360px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include AdForTablet{
+        display: none;
+    }
+}
+.weather__icon{
+    width: 159px;
+    height: 159px;
+    position: absolute;
+    background-image: url(./assets/weather-icon.png);
+    
+}
+.weather{
+    display: flex;
+}
+.screen-four{
+    min-height: 1100px;
+    @include AdForMobileL{
+        min-height: 800px;
+    }
+}
+.title__gallery{
+    margin-top: 85px;
+}
+.title--black{
+    color:$main-black;
+}
+.subtitle--black{
+    color:$main-black;
+    font-weight: 600;
+}
+.subtitle__gallery{
+    margin-top: 5px;
+    &::after{
+        position: absolute;
+        content: "";
+        top: 13px;
+        left: 204px;
+        width: 126px;
+        height: 2px;
+        background-color: $main-black;
+    }
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    @include AdForMobileL{
+        position: relative;
+    }
+}
+.gallery__photo{
+    cursor: pointer;
+    &:hover{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.4);
+        transform: scale(1.01);
+        transition: 1s;
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: $half-opacity-dark;
+            width: 100%;
+            height: 100%;
+            animation: photo 2s;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            background-image: url(./assets/scope.png);
+            width: 115px;
+            height: 115px;
+            z-index: 2;
+            animation: photo 2s;
+        }
+    }
+}
+.gallery__photo-one{
+    width: 470px;
+    height: 470px;
+    margin-right: 30px;
+    margin-bottom: 35px;
+    background-image: url(./assets/photo1.png);
+    background-size: cover;
+    @include AdForLaptop{
+        width: 49%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    @include AdForMobileL{
+        width: 425px;
+        margin-right: 0;
+        margin-bottom: 20px;
+        position: absolute;
+        left: -20px;
+    }
+}
+.gallery__photo-two{
+    width: 670px;
+    height: 290px;  
+    background-image: url(./assets/photo2.png);
+    background-size: cover;
+    @include AdForLaptop{
+        width: 49%;
+        height: 470px;
+        margin-left: auto;
+    }
+    @include AdForMobileL{
+        width: 142px;
+        height: 134px;
+        top: 470px;
+        left: -20px;
+        position: absolute;
+    }
+}
+.gallery__photo-three{
+    width: 470px;
+    height: 270px;
+    margin-right: 30px;
+    background-image: url(./assets/photo3.png);
+    background-size: cover;
+    @include AdForLaptop{
+        width: 49%;;
+        margin-right: 0px;
+        height: 461px;
+        margin-bottom: 100px;
+    }
+    @include AdForMobileL{
+        width: 142px;
+        height: 134px;
+        top: 470px;
+        left: 122px;
+        position: absolute;
+    }
+}
+.gallery__photo-four{
+    width: 670px;
+    height: 461px;
+    margin-top: -190px;
+    background-image: url(./assets/photo4.png);
+    background-size: cover;
+    @include AdForLaptop{
+        width: 49%;;
+        margin-top: 0px;
+        margin-left: auto;
+    }
+    @include AdForMobileL{
+        width: 142px;
+        height: 134px;
+        top: 470px;
+        right: -20px;
+        position: absolute;
+    }
+}
+.screen-three--secondary{
+    @include AdForMobileL{
+        display: none;
+    }
+}
+.title--quote{
+    margin-top: 245px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    font-size: 36px;
+    margin-bottom: 10px;
+    position: relative;
+    @include AdForLaptop{
+        &::after{
+            display: none;
+        }
+        &::before{
+            display: none;
+        }
+    }
+    &::after{
+        position: absolute;
+        content: "";
+        top: 11px;
+        left: 125px;
+        width: 284px;
+        height: 2px;
+        background-color: $main-white;
+    }  
+    &::before{
+        position: absolute;
+        content: "";
+        top: 11px;
+        left: 760px;
+        width: 284px;
+        height: 2px;
+        background-color: $main-white
+    }  
+}
+.subtitle--quote{
+    text-align: center;
+    letter-spacing: 0.025em;
+}
+.contacts{
+    display: flex;
+    @include AdForLaptop{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+.screen-five{
+    min-height: 600px;
+    background: $blue-gradient;
+    margin-bottom: 85px;
+   
+}
+.form{
+    margin-right: 185px;
+    position: relative;
+    &::after{
+        right: -205px;
+        top: 250px;
+        width: 265px;
+        height: 0px;
+        opacity: 0.5;
+        border: 2px solid $main-white;
+        transform: rotate(90deg);
+        position: absolute;
+        content: "";
+    }
+    @include AdForLaptop{
+        text-align: center;
+        margin-right: 0;
+        &::after{
+            display: none;  
+        }
+        @include AdForMobileL{
+            width: 90%;
+            text-align: left;
+        }
+    }
+}
+.title--contacts{
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+.subtitle--social{
+    text-align: center;
+    color: $main-white;
+    line-height: 22px;
+    letter-spacing: 0.025em;
+    color: $white-gray;
+    margin-bottom: 60px;
+}
+.social{
+    margin-top: 125px;
+    color: $main-white;
+    @include AdForLaptop{
+        margin-bottom: 60px;
+    }
+}
+.social__block{
+    font-size: 18px;
+    width: 475px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include AdForMobileL{
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+}
+.social__instagram{
+    display: flex;
+    margin-right: 95px;
+    margin-bottom: 55px;
+    position: relative;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        &::before{
+            opacity: 0.7;
+            left: -12px;
+            width: 76px;
+            height: 75px;
+            content: "";
+            position: absolute;
+            background-image: url(./assets/icon-instagram.png);
+            top: -16px;
+        }
+        .instagram__name{
+            text-decoration: underline;
+        }
+    }
+    @include AdForMobileL{
+        margin-right: 0px;
+    }
+}
+.instagram__icon{
+    margin-right: 15px;
+    border: none;
+    background: none;
+    width: 55px;
+    height: 55px;
+    background-image: url(./assets/icon-instagram1.png);
+    background-repeat: no-repeat;
+   
+}
+.social__phone{
+    margin-top: 20px;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-image: url(./assets/icon-phone.png);
+        width: 30px;
+        height: 30px;
+        top: -4px;
+        left: -45px;
+    }
+    @include AdForMobileL{
+        order: 4;
+        margin-bottom: 20px;
+        margin-left: 55px
+    }
+}
+.user{
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+.contacts__input{
+    margin-top: 25px;
+    border: none;
+    width: 458px;
+    height: 70px;
+    border-radius: 5px;
+    padding-left: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.025em;
+    &::placeholder{
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.025em;
+        color: $grey2;
+    }
+    @include AdForMobileL{
+        width: 92%;
+    }
+}
+.feedback{
+    margin-top: 60px;
+    margin-bottom: 35px;
+    @include AdForTablet{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.feedback__card{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    background: $grey3;
+    border-radius: 5px;
+    padding: 15px 0 15px 30px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    &:hover{
+        box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.2);
+        transition: 0.5s;
+    }
+    @include AdForTablet{
+        display: flex;
+        width: 43%;
+        height: 317px;
+        padding: 15px 15px 15px 15px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    @include AdForMobileL{
+        width: 350px;
+        height: 415px;
+        &:nth-child(3){
+            display: none;
+        }
+        &:nth-child(4){
+            display: none;
+        }
+    }
+}
+.user__icon{
+    width: 100px;
+    height: 100px;
+    margin-right: 50px;
+    @include AdForTablet{
+        margin-right: 0;
+    }
+    @include AdForMobileL{
+        width: 180px;
+        height: 180px;
+    }
+}
+.user__name{
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.025em;
+    color: $main-black;
+    @include AdForTablet{
+       margin-top: 40px;
+    }
+}
+.user__comment{
+    width: 70%;
+    letter-spacing: 0.025em;
+    color: $main-black;
+    font-size: 18px;
+    @include AdForTablet{
+        width: 100%;
+    }
+}
+.feedback__add{
+    display: flex;
+}
+.subtitle--add{
+    color: $main-black;
+    font-size: 18px;
+    letter-spacing: 0.025em;
+    margin-right: 15px;
+    @include AdForMobileL{
+        display: none;
+    }
+}
+.add{
+    color: $main-black;
+    text-decoration: underline;
+    font-size: 18px;
+    margin-bottom: 80px;
+    font-weight: 600;
+}
+.footer{
+    padding-top: 50px;
+    background-color: $main-black;
+    min-height: 380px;
+}
+.footer__content{
+    margin-top: 40px;
+    display: flex;
+    @include AdForMobileL{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+.subtitle--footer{
+    color: $main-white;
+    font-size: 14px;
+}
+.e-mail{
+    margin-top: 25px;
+    color: $main-white;
+    font-size: 14px;
+    letter-spacing: 0.025em;
+    &:nth-child(3){
+        margin-bottom: 40px;
+    }
+}
+.footer__contacts{
+    margin-right: 200px;
+    @include AdForTablet{
+        margin-right: 125px;
+    }
+}
+.footer__menu{
+    margin-right: 200px;
+    @include AdForTablet{
+        margin-right: 125px;
+    }
+}
+.subtitle--footer{
+    margin-top: 25px;
+}
+.title--footer{
+    font-size: 18px;
+}
+.footer__create{
+    @include AdForMobileL{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+.modal-register{	
+    display: none;
+    &::before {
+        content: '';
+        background: #000;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        opacity: 0.7;
+        z-index: 3;
+    }
+}
+.slideDownIn{
+	animation-name: slideDownIn;
+	-webkit-animation-name: slideDownIn;	
+	animation-duration: 1s;	
+	-webkit-animation-duration: 1s;
+	animation-timing-function: ease;	
+	-webkit-animation-timing-function: ease;	
+}
+.close{
+    position: absolute;
+    margin-left: auto;
+    left: 780px;
+    top: -5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    &::after{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 23px;
+        left: 10px;
+        transform: rotate(45deg);
+        background-color: $main-white;
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        height: 3px;
+        width: 23px;
+        left: 10px;
+        transform: rotate(-45deg);
+        background-color: $main-white;
+    }
+}
+.popup{
+    position: fixed;
+	top: 20%;
+	left: 25%;	
+	background: #fff; 
+	z-index: 99999;
+	opacity: 1;	
+    width: 670px;
+    height: 462px;
+    padding: 50px;
+}
+.register__input{
+    width: 640px;
+    height: 80px;
+    background: #F0F0F0;
+    border-radius: 5px;
+    border: inherit;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    &::placeholder{
+        font-size: 18px;
+        color: #6F6F6F;
+    }
+}
+.popup__support{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.title--modal{
+    color: $main-black;
+    margin-bottom: 30px;
+}
+.subtitle--modal{
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.09em;
+    text-decoration-line: underline;
+    color: #000000;
+    margin-bottom: 15px;
+}
+.btn--black{
+    background-color: $main-black;
+    color: $main-white;
+}
+.modal-weather{
+    display: none;
+    &::before {
+        content: '';
+        background: #000;
+        position: fixed; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%;
+        opacity: 0.7;
+        z-index: 3;
+    }
+}
+.popup__weather{
+    position: fixed;
+	top: 20%;
+	left: 25%;	
+	z-index: 9;
+	opacity: 1;	
+    padding: 50px;
+    width: 669px;
+    height: 462px;
+    background: linear-gradient(304.88deg, #222222 -8.11%, #4126AF 129.29%);
+}
+.weather__info{
+    display: flex;
+    justify-content: space-between;
+}
+.card__weather{
+    margin-top: 25px;
+    border-radius: 10px;
+    padding: 25px;
+    flex-wrap: wrap;
+    display: flex;
+    width: 292px;
+    height: 336px;
+    background: #EFEFEF;
+}
+.city{
+    font-weight: bold;
+    line-height: 44px;
+    letter-spacing: 0.025em;
+    color: $grey2;
+}
+.city__temp{
+    font-size: 48px;
+    margin-left: 85px;
+    margin-top: 5px;
+}
+.city__name{
+    font-size: 36px;
+}
+.info{
+    margin-top: auto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.025em;
+    color: $main-black;
+    margin-bottom: 5px;
+}
+.info__status{
+    margin-top: 10px;
+}
+.user-panel{
+    width: 42%;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+.title--modal-weather{
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.025em;
+   
+}
+.subtitle--modal-weather{
+    font-size: 14px;
+    margin-top: 17px;
+    margin-bottom: 118px;
+}
+.show{  
+    display: block;
+}
+.btn--up{   
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    border-radius: 100%;
+    background-color: $main-white;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    z-index: 111;
+    box-shadow: -3px 4px 10px rgba(0, 0, 0, 0.4);
+    &::after{
+        position: absolute;
+        content: '';
+        background-image: url(./assets/Vector4.jpg);
+        width: 23px;
+        height: 11px;
+        right: 13px;
+        top: 19px;
+    }
+    &:hover{
+        transform: translateY(-5px);
+        transition: 1s;
+    }
+    @include AdForMobileL{
+        right: 25px;
+        bottom: 25px;
+    }
+}

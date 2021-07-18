@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Boilerplate with Webpack and Tailwind 2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  </head>
+  <body>
+      <header class="container header">
+        <div class="content">
+            <div class="header__menu ">
+            <h1 class="logo">Mycity</h1>
+            
+                <ul class="menu dropmenu">
+                    <li class="menu__element">
+                        <a href="" class="menu__link spots">Spots</a>
+                    </li>
+                    <li class="menu__element">
+                    <a href="" class="menu__link photos">Photos</a>
+                </li>
+                <li class="menu__element">
+                    <a href="" class="menu__link contacts">Contacts</a>
+                </li>
+                <li class="menu__element">
+                    <a href="" class="menu__link login">Login</a>
+                </li>
+                </ul>
+                <div class="burger"></div>
+            </div>
+        </div>
+      </header>
+      <section class="container open">
+        <div class="content">
+            <div class="open__text">
+                <h2 class="title title--open">
+                    We will help you find interesting, unexplored
+                    places in your city 
+                </h2>
+                <p class="subtitle subtitle--open">
+                    Discover your city in a new way
+                </p>
+            </div>
+            <div class="six-edge__one"></div>
+            <div class="six-edge__two"></div>
+            <button class="btn btn--open">Check spots</button>
+            <div class="open__statistic">
+                <div class="statistic__content">
+                    <h3 class="statistic__count">7301</h3>
+                    <p class="statistic__description">satisfied<br> customers</p>
+                </div>
+                <div class="statistic__content">
+                    <h3 class="statistic__count">127</h3>
+                    <p class="statistic__description">new places you've<br> never seen</p>
+                </div>
+                <div class="statistic__content">
+                    <h3 class="statistic__count">15</h3>
+                    <p class="statistic__description">Cities with us<br> service</p>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="container screen-two">
+        <div class="content">
+            <h2 class="title title--main">Awesome spots in Kiev</h2>
+            <p class="subtitle subtitle--small">Choose your destiny</p>
+            <ul class="cardbar">
+                <button class="arrow arrow__back"></button>
+                <li class="card">
+                    <div class="card__title">Something </div>
+                    <div class="card__img"></div>
+                    <div class="card__favorite-btn"></div>
+                </li>
+                <li class="card">
+                    <div class="card__title">Something </div>
+                    <div class="card__img"></div>
+                    <div class="card__favorite-btn"></div>
+                </li>
+                <li class="card">
+                    <div class="card__title">Something </div>
+                    <div class="card__img"></div>
+                    <div class="card__favorite-btn"></div>
+                </li>
+                <button class="arrow arrow__next"></button>
+            </ul>
+            <button class="btn--two">Watch more</button>
+        </div>
+      </section>
+      <section class="container screen-three">
+        <div class="content">
+            <div class="weather">
+                <div class="weather__content">
+                    <h2 class="title title--weather">
+                        Always check the weather before go somewhere
+                    </h2>  
+                    <p class="subtitle">
+                        We show weather in Kiev or your city just for you
+                    </p>
+                    <button class="btn btn--weather">Check weather</button>
+                </div>
+                <div class="weather__background">
+                    <div class="weather__icon"></div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <section class="container screen-four">
+        <div class="content">
+            <h2 class="title title__gallery title--black">Awesome spots in KiEv</h2>
+            <p class="subtitle subtitle__gallery subtitle--small subtitle--black">Choose your destiny</p>  
+            <div class="gallery">
+                <div class="gallery__photo gallery__photo-one"></div>
+                <div class="gallery__photo gallery__photo-two"></div>
+                <div class="gallery__photo gallery__photo-three"></div>
+                <div class="gallery__photo gallery__photo-four"></div>
+            </div>
+        </div>
+      </section>
+      <section class="container screen-three screen-three--secondary">
+        <div class="content"> 
+            <h2 class="title title--quote">
+                Love your city
+            </h2>  
+            <p class="subtitle subtitle--quote">
+                Find your life in your city and begin to live                        
+            </p>  
+        </div>
+      </section>
+      <section class="container screen-five">
+            <div class="content">
+                <div class="contacts">
+                    <div class="form">
+                        <h2 class="title title--contacts">Contact us</h2>
+                        <p class="subtitle">We always speak with our clients
+                        so now we are waiting for you</p>
+                        <form name="contacts__input" method="post" class="user">
+                            <input type="text" placeholder="E-mail" class="contacts__input">
+                            <input type="text" placeholder="Password" class="contacts__input">
+                        </form>
+                        <button class="btn">Enter the family</button>
+                    </div>
+                    <div class="social">
+                        <p class="subtitle subtitle--social">
+                            You can follow us too
+                        </p>
+                        <div class="social__block">
+                            <div class="social__instagram">
+                                <button class="instagram__icon"></button>
+                                <p class="instagram__name">MyCity_lob0</p>
+                            </div>
+                            <div class="social__phone">+380982165555</div>
+                            <div class="social__instagram">
+                                <button class="instagram__icon"></button>
+                                <p class="instagram__name">MyCity_lob0</p>
+                            </div>
+                            <div class="social__phone">+380982165555</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      </section>
+      <section class="container screen-six">
+        <div class="content">
+            <h2 class="title title--black">Feedback from our clients</h2>
+            <ul class="feedback">
+                <li class="feedback__card">
+                    <img class="user__icon" src="./assets/user-icon.png" alt="">
+                    <div class="feedback__user">
+                        <h4 class="user__name">Maria Luzan</h4>
+                        <p class="user__comment">
+                            Thanks MYCITY for this unforgetble evening,
+                            we walk with friends all night, on your points. Great spots...
+                        </p>
+                    </div>
+                    <span class="like"></span>
+                </li>
+                <li class="feedback__card">
+                    <img class="user__icon" src="./assets/user-icon.png" alt="">
+                    <div class="feedback__user">
+                        <h4 class="user__name">Maria Luzan</h4>
+                        <p class="user__comment">
+                            Thanks MYCITY for this unforgetble evening,
+                            we walk with friends all night, on your points. Great spots...
+                        </p>
+                    </div>
+                    <span class="like"></span>
+                </li>
+                <li class="feedback__card">
+                    <img class="user__icon" src="./assets/user-icon.png" alt="">
+                    <div class="feedback__user">
+                        <h4 class="user__name">Maria Luzan</h4>
+                        <p class="user__comment">
+                            Thanks MYCITY for this unforgetble evening,
+                            we walk with friends all night, on your points. Great spots...
+                        </p>
+                    </div>
+                    <span class="like"></span>
+                </li>
+                <li class="feedback__card">
+                    <img class="user__icon" src="./assets/user-icon.png" alt="">
+                    <div class="feedback__user">
+                        <h4 class="user__name">Maria Luzan</h4>
+                        <p class="user__comment">
+                            Thanks MYCITY for this unforgetble evening,
+                            we walk with friends all night, on your points. Great spots...
+                        </p>
+                    </div>
+                    <span class="like"></span>
+                </li>
+            </ul>
+            <div class="feedback__add">
+                <p class="subtitle subtitle--add">
+                    You can left your comment here:
+                </p>
+                <a href="" class="add">add feedback</a>
+            </div>
+        </div>
+      </section>
+      <footer class="container footer">
+        <div class="content ">
+            <h2 class="logo">Mycity</h2>
+            <div class="footer__content">
+            <div class="footer__contacts">
+                <h2 class="title title--footer">Contact</h2>
+                <p class="e-mail">MyCityLoveAgain@gmail.com</p>
+                <p class="e-mail">MyCityLoveAgain@gmail.com</p>
+                <p class="subtitle">To Support</p>
+                <p class="e-mail">
+                    <b>MyCityLoveAgain@gmail.com</b>
+                </p>
+            </div>
+            <div class="footer__menu">
+                <h2 class="title title--footer">Menu</h2>
+                <p class="subtitle subtitle--footer">Spots</p>
+                <p class="subtitle subtitle--footer">Feedback</p>
+                <p class="subtitle subtitle--footer">Weather</p>
+                <p class="subtitle subtitle--footer">Photo</p>
+            </div>
+            <div class="footer__create">
+                <h2 class="title title--footer">Created by</h2>
+                <p class="subtitle subtitle--footer">Evvoart</p>
+                <p class="subtitle subtitle--footer">Sarbash.danil</p>
+            </div>
+            </div>
+        </div>
+      </footer>
+
+      <div class="modal-register ">
+          
+              <div class="popup popup__register slideDownIn">
+                    <h2 class="tittl title--modal">Register</h2>
+                    <form name="contacts__input" method="post" class="register">
+                        <p class="subtitle subtitle--black subtitle--small">Enter your e-mail</p>
+                        <input type="text" placeholder="steven.fox@gmail.com" class="register__input">
+                        <p class="subtitle subtitle--black subtitle--small">Enter your password</p>
+                        <input type="text" placeholder="Steven2001" class="register__input">
+                    </form>
+                    <div class="popup__support">
+                        <div class="support_links">
+                            <p class="subtitle subtitle--modal">Already have account?</p>
+                            <p class="subtitle subtitle--modal">Forget password</p>
+                        </div>
+                        <button class="btn btn--black">Confirm registration</button>
+                    </div>
+                    <button class="close"></button>
+              </div>
+          
+      </div>
+      <div class="modal-weather">
+          <div class="popup__weather slideDownIn">
+            <h2 class="title">Weather</h2>
+              <div class="weather__info">
+                <div class="card__weather">
+                    <h3 class="city city__name">Kiev</h3>
+                    <p class="city city__temp">17 °C</p>
+                    <div class="icon"></div>
+                    <div class="info">
+                        <p class="info__speeed">Wind speed: 2.2m</p>
+                        <p class="info__status">Status: few clouds</p>
+                    </div>
+                </div>
+                <div class="user-panel">
+                    <h2 class="title title--modal-weather">
+                        You can check weather on your location
+                    </h2>
+                    <p class="subtitle subtitle--modal-weather">
+                        If you give us take your geolocation fromyour browser
+                    </p>
+                    <button class="btn">Set location</button>
+                </div>
+              </div>
+              <button class="close"></button>
+          </div>
+      </div>
+      <button class="btn btn--up"></button>
+      <div id="root"></div>
+  </body>
+</html>
